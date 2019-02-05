@@ -1,0 +1,29 @@
+Command line:
+   MPY_32_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49538
+
+Tue Feb 05 01:38:06 2019
+
+
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 845.816 Meg
+
+ Total Signals          : 15
+ Total Nets             : 145
+ Total Signal Drivers   : 11
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 13
+ Total Traceable Variables  : 26
+ Total Scalar Nets and Variables : 357
+Total Line Count : 22
+
+ Total Simulation Time: 0.0625 sec
+
+ Current Memory Usage: 845.816 Meg
+
+Tue Feb 05 01:38:22 2019
+

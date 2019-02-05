@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/Rosswell/Documents/ISA_440/ALU_32-Bit/ALU32_TestBench_isim_beh.exe" -prj "C:/Users/Rosswell/Documents/ISA_440/ALU_32-Bit/ALU32_TestBench_beh.prj" "work.ALU32_TestBench" "work.glbl" 

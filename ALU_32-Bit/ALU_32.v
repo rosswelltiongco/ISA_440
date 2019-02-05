@@ -3,35 +3,59 @@ module ALU_32 (S, T, FS, Y_hi, Y_lo, C, V, N, Z);
     input [31:0] S, T;
     input [4:0] FS;
     output reg C, V, N, Z;
-    output reg [31:0] Y_hi, Y_lo;
-
+    output reg [31:0] Y_hi, Y_lo;    
     
-	wire [31:0] a_hi, a_lo, c_hi, c_lo, e_hi, e_lo, b_lo;
-    wire  [3:0]	a, s;
-	wire  [1:0] b, c;
-
-    //MIPS_32 mips (S,T,FS,Y_hi,Y_lo,N,Z,V,C);
-    MIPS_32 mips   (S,T,FS,a_hi,a_lo,a[3],a[2],a[1],a[0]);
     
-    //MPY_32 multiply(a, b, prod, N, Z);
-    MPY_32 multiply (S, T, {c_hi,c_lo}, b[1], b[0]);
+    wire [31:0] mips_hi, mips_lo;
+    wire [31:0] mpy_hi,mpy_lo;
+    wire [31:0] div_hi,div_lo;
+    wire mips_C,mips_V,mips_N,mips_Z;
+    wire mpy_C,mpy_V,mpy_N,mpy_Z;
+    wire div_C,div_V,div_N,div_Z;
     
-    //DIV_32 divide(a, b, quot, rem, N, Z);
-    DIV_32 divide (S, T, e_lo, e_hi, c[1], c[0]);
     
+    MIPS_32 mips (S,T,FS,mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z);
+    MPY_32  mpy  (S, T, mpy_hi, mpy_lo, mpy_C, mpy_V, mpy_N, mpy_Z);
+    DIV_32  div  (S, T, div_hi, div_lo, div_C, div_V, div_N, div_Z);
     
     
     always @ (*) begin
-        case(FS)
+        casex(FS)
             // Arithmetic
-            5'h00  : {{C,V,N,Z},Y_hi,Y_lo} = {{2'hx,a[1:0]},a_hi,a_lo};      // pass S
+            5'h00: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //pass S
+            5'h01: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //pass T
+            5'h02: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //ADD
+            5'h03: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //ADDU
+            5'h04: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //SUB
+            5'h05: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //SUBU
+            5'h06: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //SLT
+            5'h07: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //SLTU
+            5'h1E: {Y_hi,Y_lo,C,V,N,Z} = {mpy_hi,mpy_lo,mpy_C,mpy_V,mpy_N,mpy_Z}; //MUL
+            5'h1F: {Y_hi,Y_lo,C,V,N,Z} = {div_hi,div_lo,div_C,div_V,div_N,div_Z}; //DIV
             
+            // Logic
+            5'h08: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //AND
+            5'h09: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //OR
+            5'h0A: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //XOR
+            5'h0B: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //NOR
+            5'h0C: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //SRL
+            5'h0D: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //SRA
+            5'h0E: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //SLL
+            5'h16: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //ANDI
+            5'h17: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //ORI
+            5'h18: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //LUI
+            5'h19: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //XORI
             
-            5'h1E  : {{C,V,N,Z},Y_hi,Y_lo} = {{2'hx,b[1:0]},c_hi,c_lo};      // MUL
-
-            // Logical
             // Other
-            // Default
+            5'h0F: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //INC
+            5'h10: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //INC4
+            5'h11: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //DEC
+            5'h12: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //DEC4
+            5'h13: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //ZEROS
+            5'h14: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //ONES
+            5'h15: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //SP_INIT
+            
+            default: {Y_hi,Y_lo,C,V,N,Z} = {mips_hi,mips_lo,mips_C,mips_V,mips_N,mips_Z}; //default
         endcase
     end
 

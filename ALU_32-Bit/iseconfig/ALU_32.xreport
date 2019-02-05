@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-02-04T21:08:24</DateModified>
+  <DateModified>2019-02-05T01:04:35</DateModified>
   <ModuleName>ALU_32</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Rosswell/Documents/ISA_440/ALU_32-Bit/iseconfig/ALU_32.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/Rosswell/Documents/ISA_440/ALU_32-Bit\</ImplementationReportsDirectory>
-  <DateInitialized>2019-01-31T12:01:08</DateInitialized>
+  <DateInitialized>2019-02-05T01:04:34</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

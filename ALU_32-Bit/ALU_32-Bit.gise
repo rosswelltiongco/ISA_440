@@ -21,8 +21,85 @@
 
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="ALU_32-Bit.xise"/>
 
-  <files xmlns="http://www.xilinx.com/XMLSchema"/>
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ALU32_TestBench_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ALU32_TestBench_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="ALU32_TestBench_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ALU32_TestBench_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ALU_32.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ALU_32.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="ALU_32.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="DIV_32.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="DIV_32.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="DIV_32.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MIPS_32.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="MIPS_32.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="MIPS_32.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MPY_32.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="MPY_32.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="MPY_32.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="MPY_32_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1549359296" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1549359296">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1549359477" xil_pn:in_ck="9054501063963303340" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1549359477">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ALU_32.v"/>
+      <outfile xil_pn:name="DIV_32.v"/>
+      <outfile xil_pn:name="MIPS_32.v"/>
+      <outfile xil_pn:name="MIPS_ALU32_TB.v"/>
+      <outfile xil_pn:name="MPY_32.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1549359506" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-266643800511867043" xil_pn:start_ts="1549359506">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1549359506" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="899869035920790779" xil_pn:start_ts="1549359506">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1549359300" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="8129635505608831875" xil_pn:start_ts="1549359300">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1549359477" xil_pn:in_ck="9054501063963303340" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1549359477">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ALU_32.v"/>
+      <outfile xil_pn:name="DIV_32.v"/>
+      <outfile xil_pn:name="MIPS_32.v"/>
+      <outfile xil_pn:name="MIPS_ALU32_TB.v"/>
+      <outfile xil_pn:name="MPY_32.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1549359509" xil_pn:in_ck="9054501063963303340" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3701458277331317239" xil_pn:start_ts="1549359506">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ALU32_TestBench_beh.prj"/>
+      <outfile xil_pn:name="ALU32_TestBench_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1549359509" xil_pn:in_ck="1797325538020885150" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2503647871595945748" xil_pn:start_ts="1549359509">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ALU32_TestBench_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+    </transform>
+  </transforms>
 
 </generated_project>
