@@ -28,7 +28,7 @@ static unsigned int ng3[] = {1U, 0U};
 
 
 
-static void Always_9_0(char *t0)
+static void Always_25_0(char *t0)
 {
     char t8[8];
     char t16[8];
@@ -79,7 +79,7 @@ LAB0:    t1 = (t0 + 2088U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(9, ng0);
+LAB2:    xsi_set_current_line(25, ng0);
     t2 = (t0 + 2284);
     *((int *)t2) = 1;
     t3 = (t0 + 2116);
@@ -87,19 +87,19 @@ LAB2:    xsi_set_current_line(9, ng0);
     *((char **)t1) = &&LAB4;
 
 LAB1:    return;
-LAB4:    xsi_set_current_line(9, ng0);
+LAB4:    xsi_set_current_line(25, ng0);
 
-LAB5:    xsi_set_current_line(10, ng0);
+LAB5:    xsi_set_current_line(27, ng0);
     t4 = (t0 + 600U);
     t5 = *((char **)t4);
     t4 = (t0 + 1472);
     xsi_vlogvar_assign_value(t4, t5, 0, 0, 32);
-    xsi_set_current_line(11, ng0);
+    xsi_set_current_line(28, ng0);
     t2 = (t0 + 692U);
     t3 = *((char **)t2);
     t2 = (t0 + 1564);
     xsi_vlogvar_assign_value(t2, t3, 0, 0, 32);
-    xsi_set_current_line(12, ng0);
+    xsi_set_current_line(29, ng0);
     t2 = (t0 + 1472);
     t3 = (t2 + 36U);
     t4 = *((char **)t3);
@@ -110,7 +110,7 @@ LAB5:    xsi_set_current_line(10, ng0);
     xsi_vlog_signed_divide(t8, 32, t4, 32, t7, 32);
     t9 = (t0 + 1012);
     xsi_vlogvar_assign_value(t9, t8, 0, 0, 32);
-    xsi_set_current_line(13, ng0);
+    xsi_set_current_line(30, ng0);
     t2 = (t0 + 1472);
     t3 = (t2 + 36U);
     t4 = *((char **)t3);
@@ -121,15 +121,15 @@ LAB5:    xsi_set_current_line(10, ng0);
     xsi_vlog_signed_mod(t8, 32, t4, 32, t7, 32);
     t9 = (t0 + 920);
     xsi_vlogvar_assign_value(t9, t8, 0, 0, 32);
-    xsi_set_current_line(16, ng0);
+    xsi_set_current_line(33, ng0);
     t2 = ((char*)((ng1)));
     t3 = (t0 + 1104);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
-    xsi_set_current_line(17, ng0);
+    xsi_set_current_line(34, ng0);
     t2 = ((char*)((ng1)));
     t3 = (t0 + 1196);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
-    xsi_set_current_line(18, ng0);
+    xsi_set_current_line(35, ng0);
     t2 = (t0 + 1012);
     t3 = (t2 + 36U);
     t4 = *((char **)t3);
@@ -146,7 +146,7 @@ LAB5:    xsi_set_current_line(10, ng0);
     *((unsigned int *)t5) = t15;
     t7 = (t0 + 1288);
     xsi_vlogvar_assign_value(t7, t8, 0, 0, 1);
-    xsi_set_current_line(19, ng0);
+    xsi_set_current_line(36, ng0);
     t2 = (t0 + 1012);
     t3 = (t2 + 36U);
     t4 = *((char **)t3);
@@ -243,7 +243,7 @@ LAB20:    memcpy(t8, t35, 8);
 
 extern void work_m_00000000001803882767_2722733084_init()
 {
-	static char *pe[] = {(void *)Always_9_0};
+	static char *pe[] = {(void *)Always_25_0};
 	xsi_register_didat("work_m_00000000001803882767_2722733084", "isim/ALU32_TestBench_isim_beh.exe.sim/work/m_00000000001803882767_2722733084.didat");
 	xsi_register_executes(pe);
 }

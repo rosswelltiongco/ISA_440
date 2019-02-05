@@ -5,19 +5,16 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"C:/Users/Rosswell/Documents/ISA_440/ALU_32-Bit/MIPS_32.v" Line 24: Concatenation with unsized literal; will interpret as 32 bits
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"C:/Users/Rosswell/Documents/ISA_440/ALU_32-Bit/MIPS_32.v" Line 39: Concatenation with unsized literal; will interpret as 32 bits
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"C:/Users/Rosswell/Documents/ISA_440/ALU_32-Bit/MIPS_32.v" Line 25: Concatenation with unsized literal; will interpret as 32 bits
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"C:/Users/Rosswell/Documents/ISA_440/ALU_32-Bit/MIPS_32.v" Line 40: Concatenation with unsized literal; will interpret as 32 bits
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"C:/Users/Rosswell/Documents/ISA_440/ALU_32-Bit/MIPS_32.v" Line 24: Concatenation with unsized literal; will interpret as 32 bits
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"C:/Users/Rosswell/Documents/ISA_440/ALU_32-Bit/MIPS_32.v" Line 39: Concatenation with unsized literal; will interpret as 32 bits
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"C:/Users/Rosswell/Documents/ISA_440/ALU_32-Bit/MIPS_32.v" Line 25: Concatenation with unsized literal; will interpret as 32 bits
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1007" delta="unknown" >"C:/Users/Rosswell/Documents/ISA_440/ALU_32-Bit/MPY_32.v" Line 17: Element index <arg fmt="%d" index="1">63</arg> into <arg fmt="%s" index="2">Y_hi</arg> is out of bounds
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"C:/Users/Rosswell/Documents/ISA_440/ALU_32-Bit/MIPS_32.v" Line 40: Concatenation with unsized literal; will interpret as 32 bits
 </msg>
 
 </messages>

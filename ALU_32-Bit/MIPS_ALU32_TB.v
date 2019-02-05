@@ -1,7 +1,7 @@
 `timescale 1ns / 100ps
 /************************************************************************
  * Name: MIPS_ALU32_TB.v
- * Date: Jan. 15, 2019
+ * Date: Feb. 3, 2019
  *
  * This test bench is to verify the ability to use our 32-bit ALU
  *
@@ -43,7 +43,7 @@
     
      $display(" "); $display(" ");
      $display("***********************************************************************");
-     $display("   C E C B    4 4 0    A_L_U    T e s t b e n c h      R e s u l t s   ");
+     $display("   C E C S    4 4 0    A_L_U    T e s t b e n c h      R e s u l t s   ");
      $display("***********************************************************************");
      $display(" ");
      @(negedge clk)
