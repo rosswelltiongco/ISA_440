@@ -1,18 +1,26 @@
 `timescale 1ns / 1ps
-/****************************** C E C S  4 4 0 ******************************
- * 
- * File Name:  regfile32_TB.v
- * Project:    Lab_Assignment_2
- * Designer:   Rosswell Tiongco
- * Email:      rosswelltiongco@gmail.com
- * Rev. No.:   Version 1.0
- * Rev. Date:  Current Rev. Date 
- *
- * Purpose: Provides stimulus to the register file design
- *         
- * Notes:
- *
- ****************************************************************************/
+
+////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer:
+//
+// Create Date:   09:09:08 02/14/2019
+// Design Name:   regfile32
+// Module Name:   C:/Users/Rosswell/Documents/_440/ISA_440/Register_File/regfile32_TB.v
+// Project Name:  Register_File
+// Target Device:  
+// Tool versions:  
+// Description: 
+//
+// Verilog Test Fixture created by ISE for module: regfile32
+//
+// Dependencies:
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+////////////////////////////////////////////////////////////////////////////////
 
 module regfile32_TB;
 
@@ -24,8 +32,10 @@ module regfile32_TB;
 	reg D_En;
 	reg [4:0] D_Addr;
 	reg [4:0] T_Addr;
-	reg S;
-	reg T;
+
+	// Outputs
+	wire [31:0] S;
+	wire [31:0] T;
 
 	// Instantiate the Unit Under Test (UUT)
 	regfile32 uut (
@@ -39,6 +49,10 @@ module regfile32_TB;
 		.S(S), 
 		.T(T)
 	);
+    
+    integer i; 
+    reg [31:0] memory [31:0];
+    always #5 clk = ~clk;	
 
 	initial begin
 		// Initialize Inputs
@@ -49,47 +63,54 @@ module regfile32_TB;
 		D_En = 0;
 		D_Addr = 0;
 		T_Addr = 0;
-		S = 0;
-		T = 0;
 
 		// Wait 100 ns for global reset to finish
 		#100;
-        
-        
-        
+        // Wait 100 ns for global reset to finish
+		#100;
+        //One time reset assertion
+		@ (negedge clk) reset = 1'b1;
+		@ (negedge clk) reset = 1'b0;
         
         // Initializing registers
         $readmemh("IntReg_Lab2.dat",memory);
         //$timeformat [ ( units_number , precision_number , suffix_string , minimum_field_width ) ] ;
         $timeformat(-9,3,"ns",5);
-        
-        // Verification Section
-        // 1) Displaying initial contents of all 32 registers AFTER $readmemh
-        // 2) Using D input with D_Addr to write new patterns
-        // 3) Displayingupdated results
-        
-       
-        
-	end
-    
+
+        reg_dump;
+        reg_write;
+        reg_dump;   
+
+	end  
+
 
 task reg_dump;
-    for (int i = 0; i < 15; i = i + 1)begin
+    for (i = 0; i < 16; i = i + 1)begin
+        //Assigning ALL INPUTS on the negative edge of clk
         @ (negedge clk) begin
             reset = 0;
             D_En = 0;
-            S_Addr = 0;
-            R_Addr = S_Addr + 16;
+            S_Addr = i;
+            T_Addr = S_Addr + 16;
         end
+        //Reading values on the positive edge of clk
         @ (posedge clk)
-            #1 display("Time %t, S_Addr, %5'h || T_Addr, %5'h", $time, S_Addr, S, T_Addr,T);
-    
+            #1 $display("Time %t, S_Addr, %5h || T_Addr, %5h", 
+                        $time, S_Addr, S, T_Addr, T);
     end
 endtask
 
-task write_Patterns;
+task reg_write;
+    //Writing pattern to the register file
+    for (i = 1; i < 31; i = i + 1) begin
+    //Assigning ALL INPUTS on the negative edge of clk
+    @ (negedge clk)
+        D_Addr = i;
+        D = ((~i) << 8 ) + (-65536 * i ) + i;
+        S_Addr = 0;  T_Addr = 0;
+        D_En = 1; ; reset = 0;
+    end
 endtask
 
-endmodule
 
-
+endmodule 

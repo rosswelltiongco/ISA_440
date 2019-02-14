@@ -21,7 +21,7 @@ module regfile32(clk, reset, S_Addr, D, D_En, D_Addr, T_Addr, S, T);
     input  [31:0] D;
     input         D_En;
     input  [ 4:0] D_Addr, T_Addr;
-    output [31:0] S T;
+    output [31:0] S, T;
     
     
     // Instantiating a 32x32 register array
