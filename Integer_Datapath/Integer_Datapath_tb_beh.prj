@@ -1,0 +1,8 @@
+verilog work "MPY_32.v"
+verilog work "MIPS_32.v"
+verilog work "DIV_32.v"
+verilog work "regfile32.v"
+verilog work "ALU_32.v"
+verilog work "Integer_Datapath.v"
+verilog work "Integer_Datapath_tb.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,0 +1,40 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/Integer_Datapath_tb_isim_beh.exe -prj C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/Integer_Datapath_tb_beh.prj work.Integer_Datapath_tb work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/MPY_32.v" into library work
+Analyzing Verilog file "C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/MIPS_32.v" into library work
+WARNING:HDLCompiler:327 - "C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/MIPS_32.v" Line 39: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/MIPS_32.v" Line 40: Concatenation with unsized literal; will interpret as 32 bits
+Analyzing Verilog file "C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/DIV_32.v" into library work
+Analyzing Verilog file "C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/regfile32.v" into library work
+Analyzing Verilog file "C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/ALU_32.v" into library work
+Analyzing Verilog file "C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/Integer_Datapath.v" into library work
+WARNING:HDLCompiler:35 - "C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/Integer_Datapath.v" Line 34: <S_out> is already implicitly declared earlier.
+WARNING:HDLCompiler:35 - "C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/Integer_Datapath.v" Line 41: <Y_hi> is already implicitly declared earlier.
+WARNING:HDLCompiler:329 - "C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/Integer_Datapath.v" Line 37: Target <D_OUT> of concurrent assignment or output port connection should be a net type.
+WARNING:HDLCompiler:329 - "C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/Integer_Datapath.v" Line 53: Target <ALU_OUT> of concurrent assignment or output port connection should be a net type.
+Analyzing Verilog file "C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/Integer_Datapath_tb.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:329 - "C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/Integer_Datapath.v" Line 37: Target <D_OUT> of concurrent assignment or output port connection should be a net type.
+WARNING:HDLCompiler:329 - "C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/Integer_Datapath.v" Line 40: Target <C> of concurrent assignment or output port connection should be a net type.
+WARNING:HDLCompiler:329 - "C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/Integer_Datapath.v" Line 53: Target <ALU_OUT> of concurrent assignment or output port connection should be a net type.
+WARNING:HDLCompiler:327 - "C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/MIPS_32.v" Line 39: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/MIPS_32.v" Line 40: Concatenation with unsized literal; will interpret as 32 bits
+Completed static elaboration
+Compiling module regfile32
+Compiling module MIPS_32
+Compiling module MPY_32
+Compiling module DIV_32
+Compiling module ALU_32
+Compiling module Integer_Datapath
+Compiling module Integer_Datapath_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 8 Verilog Units
+Built simulation executable C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/Integer_Datapath_tb_isim_beh.exe
+Fuse Memory Usage: 28644 KB
+Fuse CPU Usage: 546 ms

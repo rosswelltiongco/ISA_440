@@ -10,19 +10,19 @@
  *
  * Purpose: The Register File is the component that contains the "user
  *          registers" for the processor. Writing is done synchronously to
- *				the clock, whereas reading is done asynchronously. The core
- *				memory is a 32 wide by 32 deep register array
+ *			the clock, whereas reading is done asynchronously. The core
+ *			memory is a 32 wide by 32 deep register array
  *         
  * Notes: 
  *
  ****************************************************************************/
 module Integer_Datapath(clk, reset, D_En, D_Addr, S_Addr, FS, HILO_ld, T_Addr,
-								DT,T_Sel,DY, PC_in,Y_sel,C,V,N,Z,ALU_OUT,D_OUT);
+								DT,T_Sel,DY,PC_in,Y_Sel,C,V,N,Z,ALU_OUT,D_OUT);
 	input clk, reset;
-	input HILO_ld, D_En, T_Sel, PC_in;
+	input HILO_ld, D_En, T_Sel;
 	input [2:0] Y_Sel;
 	input [4:0] S_Addr, FS, D_Addr, T_Addr;
-	input [31:0] DT, DY;
+	input [31:0] DT, DY, PC_in;
 	output reg C,V,N,Z;
 	output reg [31:0] ALU_OUT, D_OUT;
 
@@ -34,11 +34,10 @@ module Integer_Datapath(clk, reset, D_En, D_Addr, S_Addr, FS, HILO_ld, T_Addr,
 	wire [31:0] S_out, T_out;
 
 	// T-MUX
-	assign T_mux_out = (T_Sel) ? T_out : DT;
-	wire [31:0] T_mux_out;
+	assign D_OUT = (T_Sel) ? DT: T_out;
 
 	// ALU
-	ALU_32 alu (.S(S_out), .T(T_mux_out), .FS(FS), .Y_hi(Y_hi), .Y_lo(Y_lo), .C(C), .V(V), .N(N), .Z(Z));
+	ALU_32 alu (.S(S_out), .T(D_OUT), .FS(FS), .Y_hi(Y_hi), .Y_lo(Y_lo), .C(C), .V(V), .N(N), .Z(Z));
 	wire [31:0] Y_hi, Y_lo;
 	
 	
@@ -51,18 +50,11 @@ module Integer_Datapath(clk, reset, D_En, D_Addr, S_Addr, FS, HILO_ld, T_Addr,
 
 
 	// Y-MUX
-	assign Y_mux_out = (Y_Sel == 3'b111) ?  HI :
-							 (Y_Sel == 3'b110) ?  LO :
-							 (Y_Sel == 3'b101) ? Y_lo:
-							 (Y_Sel == 3'b100) ?  DY :
-							 (Y_SEL == 3'b011) ?PC_in:
-													  32'b0;
-	wire [31:0] Y_mux_out;
-	
-	
-	// Assign outputs
-	assign D_OUT = T_mux_out;
-	assign ALU_OUT = Y_mux_out;
-
+	assign ALU_OUT =         (Y_Sel == 3'h8) ?  HI :
+							 (Y_Sel == 3'h7) ?  LO :
+							 (Y_Sel == 3'h6) ? Y_lo:
+							 (Y_Sel == 3'h5) ?  DY :
+							 (Y_Sel == 3'h4) ?PC_in:
+											  32'b0;
 
 endmodule
