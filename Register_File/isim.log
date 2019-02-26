@@ -1,0 +1,60 @@
+ISim log file
+Running: C:\Users\Rosswell\Documents\_440\ISA_440\Register_File\regfile32_TB_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Rosswell/Documents/_440/ISA_440/Register_File/regfile32_TB_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+
+
+CECS440 Register File Testbench
+
+
+INITIALIZING REGISTERS
+Finished circuit initialization process.
+
+
+READING REGISTERS
+Time 346.000ns || S_Addr: 00  S:00000000 || T_Addr:10  T:000001ff
+Time 356.000ns || S_Addr: 01  S:ffffffff || T_Addr:11  T:000003ff
+Time 366.000ns || S_Addr: 02  S:5a5a5a5a || T_Addr:12  T:000007ff
+Time 376.000ns || S_Addr: 03  S:a5a5a5a5 || T_Addr:13  T:00000fff
+Time 386.000ns || S_Addr: 04  S:cccccccc || T_Addr:14  T:10000001
+Time 396.000ns || S_Addr: 05  S:33333333 || T_Addr:15  T:30000003
+Time 406.000ns || S_Addr: 06  S:c3c3c3c3 || T_Addr:16  T:70000007
+Time 416.000ns || S_Addr: 07  S:3c3c3c3c || T_Addr:17  T:f000000f
+Time 426.000ns || S_Addr: 08  S:00000001 || T_Addr:18  T:f800001f
+Time 436.000ns || S_Addr: 09  S:00000003 || T_Addr:19  T:fc00003f
+Time 446.000ns || S_Addr: 0a  S:00000007 || T_Addr:1a  T:fe00007f
+Time 456.000ns || S_Addr: 0b  S:0000000f || T_Addr:1b  T:ff0000ff
+Time 466.000ns || S_Addr: 0c  S:0000001f || T_Addr:1c  T:ff8001ff
+Time 476.000ns || S_Addr: 0d  S:0000003f || T_Addr:1d  T:ffc003ff
+Time 486.000ns || S_Addr: 0e  S:0000007f || T_Addr:1e  T:f0f0f0f0
+Time 496.000ns || S_Addr: 0f  S:000000ff || T_Addr:1f  T:0f0f0f0f
+
+
+WRITING TO REGISTERS
+
+
+READING REGISTERS
+Time 816.000ns || S_Addr: 00  S:00000000 || T_Addr:10  T:ffefef10
+Time 826.000ns || S_Addr: 01  S:fffefe01 || T_Addr:11  T:ffeeee11
+Time 836.000ns || S_Addr: 02  S:fffdfd02 || T_Addr:12  T:ffeded12
+Time 846.000ns || S_Addr: 03  S:fffcfc03 || T_Addr:13  T:ffecec13
+Time 856.000ns || S_Addr: 04  S:fffbfb04 || T_Addr:14  T:ffebeb14
+Time 866.000ns || S_Addr: 05  S:fffafa05 || T_Addr:15  T:ffeaea15
+Time 876.000ns || S_Addr: 06  S:fff9f906 || T_Addr:16  T:ffe9e916
+Time 886.000ns || S_Addr: 07  S:fff8f807 || T_Addr:17  T:ffe8e817
+Time 896.000ns || S_Addr: 08  S:fff7f708 || T_Addr:18  T:ffe7e718
+Time 906.000ns || S_Addr: 09  S:fff6f609 || T_Addr:19  T:ffe6e619
+Time 916.000ns || S_Addr: 0a  S:fff5f50a || T_Addr:1a  T:ffe5e51a
+Time 926.000ns || S_Addr: 0b  S:fff4f40b || T_Addr:1b  T:ffe4e41b
+Time 936.000ns || S_Addr: 0c  S:fff3f30c || T_Addr:1c  T:ffe3e31c
+Time 946.000ns || S_Addr: 0d  S:fff2f20d || T_Addr:1d  T:ffe2e21d
+Time 956.000ns || S_Addr: 0e  S:fff1f10e || T_Addr:1e  T:ffe1e11e
+Time 966.000ns || S_Addr: 0f  S:fff0f00f || T_Addr:1f  T:ffe0e01f

@@ -25,6 +25,7 @@
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="7"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="7"/>
     </file>
+    <file xil_pn:name="IntReg_Lab2.dat.txt" xil_pn:type="FILE_USERDOC"/>
   </files>
 
   <properties>

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/016091762/Downloads/ISA_440-master/ISA_440-master/Register_File/regfile32_TB_isim_beh.exe" -prj "C:/Users/016091762/Downloads/ISA_440-master/ISA_440-master/Register_File/regfile32_TB_beh.prj" "work.regfile32_TB" "work.glbl" 
