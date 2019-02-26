@@ -78,7 +78,7 @@
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
-         <ClosedNode>/Integer_Datapath C:|Users|Rosswell|Documents|_440|ISA_440|Integer_Datapath|Integer_Datapath.v</ClosedNode>
+         <ClosedNode>/Integer_Datapath C:|Users|Rosswell|Documents|_440|ISA_440|Integer_Datapath|Integer_Datapath.v/alu - ALU_32</ClosedNode>
          <ClosedNode>/Integer_Datapath_tb C:|Users|Rosswell|Documents|_440|ISA_440|Integer_Datapath|Integer_Datapath_tb.v/uut - Integer_Datapath/alu - ALU_32</ClosedNode>
       </ClosedNodes>
       <SelectedItems>

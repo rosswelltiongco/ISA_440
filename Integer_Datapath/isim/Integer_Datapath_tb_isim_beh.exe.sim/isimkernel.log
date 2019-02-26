@@ -2,29 +2,28 @@ Command line:
    Integer_Datapath_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  58339
+     -socket  49975
 
-Tue Feb 26 06:39:39 2019
+Tue Feb 26 08:49:04 2019
 
 
- Elaboration Time: 0.046875 sec
+ Elaboration Time: 0.0625 sec
 
- Current Memory Usage: 5173.59 Meg
+ Current Memory Usage: 5173.58 Meg
 
- Total Signals          : 73
- Total Nets             : 605
- Total Signal Drivers   : 56
- Total Blocks           : 8
- Total Primitive Blocks : 5
- Total Processes        : 67
- Total Traceable Variables  : 73
- Total Scalar Nets and Variables : 3517
-In process Integer_Datapath.vCont_37_0 
- FATAL ERROR:ISim: This application has discovered an exceptional condition from which it cannot recover. Process will terminate. To search for possible resolutions to this issue, refer to the Xilinx answer database by going to http://www.xilinx.com/support/answers/index.htm and search with keywords 'ISim' and 'FATAL ERROR'. For technical support on this issue, please open a WebCase with this project attached at http://www.xilinx.com/support.
+ Total Signals          : 77
+ Total Nets             : 601
+ Total Signal Drivers   : 51
+ Total Blocks           : 10
+ Total Primitive Blocks : 7
+ Total Processes        : 60
+ Total Traceable Variables  : 71
+ Total Scalar Nets and Variables : 3449
+Total Line Count : 168
 
- Total Simulation Time: 0.375 sec
+ Total Simulation Time: 0.125 sec
 
- Current Memory Usage: 5225.56 Meg
+ Current Memory Usage: 5173.58 Meg
 
-Tue Feb 26 06:39:47 2019
+Tue Feb 26 08:49:29 2019
 

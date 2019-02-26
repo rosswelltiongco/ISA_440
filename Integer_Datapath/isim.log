@@ -5,11 +5,30 @@ WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
 WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
 This is a Lite version of ISim.
+WARNING: File "C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/Integer_Datapath.v" Line 56.  For instance uut/alu/, width 32 of formal port S is not equal to width 1 of actual signal S_Out.
 Time resolution is 1 ps
 # onerror resume
 # wave add /
 # run 1000 ns
 Simulator is doing circuit initialization process.
-ERROR: In process Integer_Datapath.vCont_37_0 
- FATAL ERROR:ISim: This application has discovered an exceptional condition from which it cannot recover. Process will terminate. To search for possible resolutions to this issue, refer to the Xilinx answer database by going to http://www.xilinx.com/support/answers/index.htm and search with keywords 'ISim' and 'FATAL ERROR'. For technical support on this issue, please open a WebCase with this project attached at http://www.xilinx.com/support.
-INFO: Simulator is stopped.
+Finished circuit initialization process.
+WARNING: File IntReg_Lab3.dat referenced on C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/Integer_Datapath_tb.v at line 82 cannot be opened for reading. Please ensure that this file is available in the current working directory. 
+Displaying values within the register
+ 
+t =  230.0 ps || S at Address 00 = zzzzzzzz || T at Address 00 = 00000000
+t =  240.0 ps || S at Address 01 = zzzzzzzz || T at Address 11 = xxxxxxxx
+t =  250.0 ps || S at Address 02 = zzzzzzzz || T at Address 12 = xxxxxxxx
+t =  260.0 ps || S at Address 03 = zzzzzzzz || T at Address 13 = xxxxxxxx
+t =  270.0 ps || S at Address 04 = zzzzzzzz || T at Address 14 = xxxxxxxx
+t =  280.0 ps || S at Address 05 = zzzzzzzz || T at Address 15 = xxxxxxxx
+t =  290.0 ps || S at Address 06 = zzzzzzzz || T at Address 16 = xxxxxxxx
+t =  300.0 ps || S at Address 07 = zzzzzzzz || T at Address 17 = xxxxxxxx
+t =  310.0 ps || S at Address 08 = zzzzzzzz || T at Address 18 = xxxxxxxx
+t =  320.0 ps || S at Address 09 = zzzzzzzz || T at Address 19 = xxxxxxxx
+t =  330.0 ps || S at Address 0a = zzzzzzzz || T at Address 1a = xxxxxxxx
+t =  340.0 ps || S at Address 0b = zzzzzzzz || T at Address 1b = xxxxxxxx
+t =  350.0 ps || S at Address 0c = zzzzzzzz || T at Address 1c = xxxxxxxx
+t =  360.0 ps || S at Address 0d = zzzzzzzz || T at Address 1d = xxxxxxxx
+t =  370.0 ps || S at Address 0e = zzzzzzzz || T at Address 1e = xxxxxxxx
+t =  380.0 ps || S at Address 0f = zzzzzzzz || T at Address 1f = xxxxxxxx
+ 
