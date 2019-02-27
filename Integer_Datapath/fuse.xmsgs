@@ -5,19 +5,13 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/MIPS_32.v" Line 39: Concatenation with unsized literal; will interpret as 32 bits
+<msg type="warning" file="HDLCompiler" num="35" delta="unknown" >"C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/Integer_Datapath.v" Line 45: &lt;<arg fmt="%s" index="1">S_OUT</arg>&gt; is already implicitly declared earlier.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/MIPS_32.v" Line 40: Concatenation with unsized literal; will interpret as 32 bits
+<msg type="warning" file="HDLCompiler" num="35" delta="unknown" >"C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/Integer_Datapath.v" Line 50: &lt;<arg fmt="%s" index="1">T_MUX_OUT</arg>&gt; is already implicitly declared earlier.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/Integer_Datapath.v" Line 56: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">S</arg>&gt;. Formal port size is <arg fmt="%d" index="2">32</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/MIPS_32.v" Line 39: Concatenation with unsized literal; will interpret as 32 bits
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/MIPS_32.v" Line 40: Concatenation with unsized literal; will interpret as 32 bits
+<msg type="warning" file="HDLCompiler" num="35" delta="unknown" >"C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/Integer_Datapath.v" Line 55: &lt;<arg fmt="%s" index="1">Y_hi_out</arg>&gt; is already implicitly declared earlier.
 </msg>
 
 </messages>

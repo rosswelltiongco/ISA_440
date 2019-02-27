@@ -5,30 +5,55 @@ WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
 WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
 This is a Lite version of ISim.
-WARNING: File "C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/Integer_Datapath.v" Line 56.  For instance uut/alu/, width 32 of formal port S is not equal to width 1 of actual signal S_Out.
 Time resolution is 1 ps
 # onerror resume
 # wave add /
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-WARNING: File IntReg_Lab3.dat referenced on C:/Users/Rosswell/Documents/_440/ISA_440/Integer_Datapath/Integer_Datapath_tb.v at line 82 cannot be opened for reading. Please ensure that this file is available in the current working directory. 
-Displaying values within the register
+
+PERFORMING REGISTER INITIALIZATION
+
+
+PERFORMING REGISTER DUMP
+
+t =  210.0 ps || S_Addr: 00|| ALU_OUT: 00000000
+t =  220.0 ps || S_Addr: 01|| ALU_OUT: 12345678
+t =  230.0 ps || S_Addr: 02|| ALU_OUT: 89abcdef
+t =  240.0 ps || S_Addr: 03|| ALU_OUT: a5a5a5a5
+t =  250.0 ps || S_Addr: 04|| ALU_OUT: 5a5a5a5a
+t =  260.0 ps || S_Addr: 05|| ALU_OUT: 2468ace0
+t =  270.0 ps || S_Addr: 06|| ALU_OUT: 13579bdf
+t =  280.0 ps || S_Addr: 07|| ALU_OUT: 0f0f0f0f
+t =  290.0 ps || S_Addr: 08|| ALU_OUT: f0f0f0f0
+t =  300.0 ps || S_Addr: 09|| ALU_OUT: 00000009
+t =  310.0 ps || S_Addr: 0a|| ALU_OUT: 0000000a
+t =  320.0 ps || S_Addr: 0b|| ALU_OUT: 0000000b
+t =  330.0 ps || S_Addr: 0c|| ALU_OUT: 0000000c
+t =  340.0 ps || S_Addr: 0d|| ALU_OUT: 0000000d
+t =  350.0 ps || S_Addr: 0e|| ALU_OUT: fffffff8
+t =  360.0 ps || S_Addr: 0f|| ALU_OUT: 000075cc
  
-t =  230.0 ps || S at Address 00 = zzzzzzzz || T at Address 00 = 00000000
-t =  240.0 ps || S at Address 01 = zzzzzzzz || T at Address 11 = xxxxxxxx
-t =  250.0 ps || S at Address 02 = zzzzzzzz || T at Address 12 = xxxxxxxx
-t =  260.0 ps || S at Address 03 = zzzzzzzz || T at Address 13 = xxxxxxxx
-t =  270.0 ps || S at Address 04 = zzzzzzzz || T at Address 14 = xxxxxxxx
-t =  280.0 ps || S at Address 05 = zzzzzzzz || T at Address 15 = xxxxxxxx
-t =  290.0 ps || S at Address 06 = zzzzzzzz || T at Address 16 = xxxxxxxx
-t =  300.0 ps || S at Address 07 = zzzzzzzz || T at Address 17 = xxxxxxxx
-t =  310.0 ps || S at Address 08 = zzzzzzzz || T at Address 18 = xxxxxxxx
-t =  320.0 ps || S at Address 09 = zzzzzzzz || T at Address 19 = xxxxxxxx
-t =  330.0 ps || S at Address 0a = zzzzzzzz || T at Address 1a = xxxxxxxx
-t =  340.0 ps || S at Address 0b = zzzzzzzz || T at Address 1b = xxxxxxxx
-t =  350.0 ps || S at Address 0c = zzzzzzzz || T at Address 1c = xxxxxxxx
-t =  360.0 ps || S at Address 0d = zzzzzzzz || T at Address 1d = xxxxxxxx
-t =  370.0 ps || S at Address 0e = zzzzzzzz || T at Address 1e = xxxxxxxx
-t =  380.0 ps || S at Address 0f = zzzzzzzz || T at Address 1f = xxxxxxxx
+
+PERFORMING MICRO-OPERATIONS
+
+
+PERFORMING REGISTER DUMP
+
+t =  530.0 ps || S_Addr: 00|| ALU_OUT: 00000000
+t =  540.0 ps || S_Addr: 01|| ALU_OUT: ffffffff
+t =  550.0 ps || S_Addr: 02|| ALU_OUT: 00000007
+t =  560.0 ps || S_Addr: 03|| ALU_OUT: 2d2d2d2d
+t =  570.0 ps || S_Addr: 04|| ALU_OUT: 48d159c0
+t =  580.0 ps || S_Addr: 05|| ALU_OUT: fffff147
+t =  590.0 ps || S_Addr: 06|| ALU_OUT: 00000004
+t =  600.0 ps || S_Addr: 07|| ALU_OUT: ffffffc9
+t =  610.0 ps || S_Addr: 08|| ALU_OUT: ffffffff
+t =  620.0 ps || S_Addr: 09|| ALU_OUT: ffffffea
+t =  630.0 ps || S_Addr: 0a|| ALU_OUT: fffffff6
+t =  640.0 ps || S_Addr: 0b|| ALU_OUT: fffffff4
+t =  650.0 ps || S_Addr: 0c|| ALU_OUT: abcdef01
+t =  660.0 ps || S_Addr: 0d|| ALU_OUT: 100100c0
+t =  670.0 ps || S_Addr: 0e|| ALU_OUT: fffffff8
+t =  680.0 ps || S_Addr: 0f|| ALU_OUT: 000075cc
  

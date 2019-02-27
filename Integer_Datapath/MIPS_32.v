@@ -36,8 +36,8 @@ module MIPS_32(S,T,FS,Y_hi,Y_lo,C,V,N,Z);
             5'h03  : {C,Y_lo} = S + T;                                  // ADDU
             5'h04  : {C,Y_lo} = int_s - int_t;                          // SUB
             5'h05  : {C,Y_lo} = S - T;                                  // SUBU
-            5'h06  : {C,Y_lo} = (int_s < int_t) ? {1'bX, 1}: {1'bx, 0}; // SLT
-            5'h07  : {C,Y_lo} = (S < T) ? {1'bx, 1}: {1'bx,0};          // SLTU
+            5'h06  : {C,Y_lo} =(int_s<int_t)?{1'bX,32'b1}:{1'bx,32'b0}; // SLT
+            5'h07  : {C,Y_lo} =(S < T) ? {1'bx, 32'b1}: {1'bx,32'b0};   // SLTU
             
             // Logic
             5'h08  : {C,Y_lo} = {1'bx, S & T};                          // AND
